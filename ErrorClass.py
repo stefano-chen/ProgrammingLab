@@ -1,0 +1,2 @@
+class ErrorClass(Exception):
+    pass
