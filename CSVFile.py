@@ -1,6 +1,6 @@
 class CSVFile:
-    def __init__(self, filename):
-        self.name = filename
+    def __init__(self, name):
+        self.name = name
         self.file = None
 
     def __open(self):
@@ -16,7 +16,7 @@ class CSVFile:
             for item in self.file:
                 element = item.split(',')
                 element[1] = element[1].replace('\n', '')
-                if element[0] != 'Data':
+                if element[0] != 'Date':
                     li.append(element)
             self.file.close()
         return li
