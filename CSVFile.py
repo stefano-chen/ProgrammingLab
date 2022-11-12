@@ -15,8 +15,8 @@ class CSVFile:
         if self.__open():
             for item in self.file:
                 element = item.split(',')
-                element[1] = element[1].replace('\n', '')
                 if element[0] != 'Date':
+                    element[1] = element[1].replace('\n', '')
                     li.append(element)
             self.file.close()
         return li
