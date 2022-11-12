@@ -13,3 +13,11 @@ def sum_csv(file_name):
                     result += 0
     file.close()
     return result if not empty else None
+
+
+def main():
+    print(sum_csv("test.csv"))
+
+
+if __name__ == "__main__":
+    main()
