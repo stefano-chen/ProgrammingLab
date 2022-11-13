@@ -8,6 +8,7 @@ class CSVFile:
             self.file = open(self.name, 'r')
             return True
         except FileNotFoundError:
+            print("Errore File not Found")
             return False
 
     def get_data(self):
@@ -20,7 +21,3 @@ class CSVFile:
                     li.append(element)
             self.file.close()
         return li
-
-
-csv = CSVFile("test.csv")
-print(csv.get_data())

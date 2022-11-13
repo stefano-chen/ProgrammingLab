@@ -9,7 +9,7 @@ def sum_csv(file_name):
             if element[0] != "Date":
                 try:
                     result += float(element[1])
-                except:
+                except ValueError:
                     result += 0
     file.close()
     return result if not empty else None
